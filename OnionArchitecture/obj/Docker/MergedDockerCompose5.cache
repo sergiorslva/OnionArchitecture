@@ -1,0 +1,34 @@
+services:
+  onionarchitecture.db:
+    container_name: onionarchitecture_db
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: Developer
+      MSSQL_SA_PASSWORD: '@Password01'
+    image: mcr.microsoft.com/mssql/server
+    ports:
+    - published: 1433
+      target: 1433
+    volumes:
+    - D:\GIT-SERGIO\onion-architecture\OnionArchitecture\db:/var/lib/mssql/data:rw
+  onionarchitecture.web:
+    build:
+      context: D:\GIT-SERGIO\onion-architecture\OnionArchitecture
+      dockerfile: Web/Dockerfile
+    container_name: onionarchitecture_web
+    depends_on:
+      onionarchitecture.db:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:80
+    image: onionarchitectureweb
+    ports:
+    - published: 5000
+      target: 80
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\silva\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\silva\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

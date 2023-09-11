@@ -1,0 +1,12 @@
+D:\GIT-SERGIO\onion-architecture\OnionArchitecture\Domain\bin\Debug\net6.0\Domain.deps.json
+D:\GIT-SERGIO\onion-architecture\OnionArchitecture\Domain\bin\Debug\net6.0\Domain.dll
+D:\GIT-SERGIO\onion-architecture\OnionArchitecture\Domain\bin\Debug\net6.0\Domain.pdb
+D:\GIT-SERGIO\onion-architecture\OnionArchitecture\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+D:\GIT-SERGIO\onion-architecture\OnionArchitecture\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\GIT-SERGIO\onion-architecture\OnionArchitecture\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+D:\GIT-SERGIO\onion-architecture\OnionArchitecture\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+D:\GIT-SERGIO\onion-architecture\OnionArchitecture\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+D:\GIT-SERGIO\onion-architecture\OnionArchitecture\Domain\obj\Debug\net6.0\Domain.dll
+D:\GIT-SERGIO\onion-architecture\OnionArchitecture\Domain\obj\Debug\net6.0\refint\Domain.dll
+D:\GIT-SERGIO\onion-architecture\OnionArchitecture\Domain\obj\Debug\net6.0\Domain.pdb
+D:\GIT-SERGIO\onion-architecture\OnionArchitecture\Domain\obj\Debug\net6.0\ref\Domain.dll

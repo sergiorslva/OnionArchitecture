@@ -1,0 +1,53 @@
+services:
+  onionarchitecture.db:
+    container_name: onionarchitecture_db
+    environment:
+      POSTGRES_DB: onionarchitecture
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+    image: postgres:13.2
+    ports:
+    - published: 5432
+      target: 5432
+    volumes:
+    - D:\GIT-SERGIO\onion-architecture\OnionArchitecture\db:/var/lib/postgresql/data:rw
+  onionarchitecture.web:
+    build:
+      context: D:\GIT-SERGIO\onion-architecture\OnionArchitecture
+      dockerfile: Web/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: Web
+      target: base
+    container_name: onionarchitecture_web
+    depends_on:
+      onionarchitecture.db:
+        condition: service_started
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: http://+:80
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: ''
+    image: onionarchitectureweb:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net6.0/Web.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 5000
+      target: 80
+    - target: 80
+    - target: 443
+    tty: true
+    volumes:
+    - D:\GIT-SERGIO\onion-architecture\OnionArchitecture\Web:/app:rw
+    - C:\Users\silva\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\silva\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\silva\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Users\silva\.nuget\packages:/root/.nuget/packages:ro
+    - D:\GIT-SERGIO\onion-architecture\OnionArchitecture:/src:rw
+version: '3.4'

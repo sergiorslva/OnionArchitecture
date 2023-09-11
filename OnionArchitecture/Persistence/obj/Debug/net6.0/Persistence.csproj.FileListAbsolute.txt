@@ -1,0 +1,17 @@
+D:\GIT-SERGIO\onion-architecture\OnionArchitecture\Persistence\bin\Debug\net6.0\Persistence.deps.json
+D:\GIT-SERGIO\onion-architecture\OnionArchitecture\Persistence\bin\Debug\net6.0\Persistence.dll
+D:\GIT-SERGIO\onion-architecture\OnionArchitecture\Persistence\bin\Debug\net6.0\Persistence.pdb
+D:\GIT-SERGIO\onion-architecture\OnionArchitecture\Persistence\bin\Debug\net6.0\Domain.dll
+D:\GIT-SERGIO\onion-architecture\OnionArchitecture\Persistence\bin\Debug\net6.0\Domain.pdb
+D:\GIT-SERGIO\onion-architecture\OnionArchitecture\Persistence\obj\Debug\net6.0\Persistence.csproj.AssemblyReference.cache
+D:\GIT-SERGIO\onion-architecture\OnionArchitecture\Persistence\obj\Debug\net6.0\Persistence.GeneratedMSBuildEditorConfig.editorconfig
+D:\GIT-SERGIO\onion-architecture\OnionArchitecture\Persistence\obj\Debug\net6.0\Persistence.AssemblyInfoInputs.cache
+D:\GIT-SERGIO\onion-architecture\OnionArchitecture\Persistence\obj\Debug\net6.0\Persistence.AssemblyInfo.cs
+D:\GIT-SERGIO\onion-architecture\OnionArchitecture\Persistence\obj\Debug\net6.0\Persistence.csproj.CoreCompileInputs.cache
+D:\GIT-SERGIO\onion-architecture\OnionArchitecture\Persistence\obj\Debug\net6.0\Persistence.csproj.CopyComplete
+D:\GIT-SERGIO\onion-architecture\OnionArchitecture\Persistence\obj\Debug\net6.0\Persistence.dll
+D:\GIT-SERGIO\onion-architecture\OnionArchitecture\Persistence\obj\Debug\net6.0\refint\Persistence.dll
+D:\GIT-SERGIO\onion-architecture\OnionArchitecture\Persistence\obj\Debug\net6.0\Persistence.pdb
+D:\GIT-SERGIO\onion-architecture\OnionArchitecture\Persistence\obj\Debug\net6.0\ref\Persistence.dll
+D:\GIT-SERGIO\onion-architecture\OnionArchitecture\Persistence\bin\Debug\net6.0\Persistence.runtimeconfig.json
+D:\GIT-SERGIO\onion-architecture\OnionArchitecture\Persistence\obj\Debug\net6.0\Persistence.genruntimeconfig.cache
