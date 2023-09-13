@@ -1,0 +1,35 @@
+services:
+  mssqltools:
+    command: /bin/bash -c "sleep 10 && /opt/mssql-tools/bin/sqlcmd -S sqlserver -U
+      sa -P @Password01 -d master -i /tmp/db-create.sql"
+    depends_on:
+      sqlserver:
+        condition: service_started
+    image: mcr.microsoft.com/mssql-tools
+    volumes:
+    - D:\GIT-SERGIO\onion-architecture\OnionArchitecture\db-create.sql:/tmp/db-create.sql:rw
+  onionarchitecture.web:
+    build:
+      context: D:\GIT-SERGIO\onion-architecture\OnionArchitecture
+      dockerfile: Web/Dockerfile
+    container_name: onionarchitecture_web
+    depends_on:
+      mssqltools:
+        condition: service_started
+    image: onionarchitectureweb
+    ports:
+    - published: 5000
+      target: 80
+  sqlserver:
+    container_name: onionarchitecture_db
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: Developer
+      MSSQL_SA_PASSWORD: '@Password01'
+    image: mcr.microsoft.com/mssql/server
+    ports:
+    - published: 1433
+      target: 1433
+    volumes:
+    - D:\GIT-SERGIO\onion-architecture\OnionArchitecture\db:/var/lib/mssql/data:rw
+version: '3.4'

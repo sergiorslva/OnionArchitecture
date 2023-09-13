@@ -20,8 +20,7 @@ namespace Persistence.Configurations
             builder.Property(t => t.Phone).HasMaxLength(20);
 
             builder.Property(t => t.StudentLevel)
-                .HasConversion(v => v.ToString(),
-                v => (StudentLevelEnum)Enum.Parse(typeof(StudentLevelEnum), v));
+                .HasConversion<int>();
         }
     }
 }

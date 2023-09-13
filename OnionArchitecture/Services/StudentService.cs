@@ -19,7 +19,7 @@ namespace Services
 
         public async Task<StudentDto> CreateAsync(StudentForCreationDto studentForCreationDto, CancellationToken cancellationToken = default)
         {
-            var student = studentForCreationDto.Adapt<Student>();
+            var student = studentForCreationDto.Adapt<Student>();            
             _studentRepository.Insert(student);
 
             await _unitOfWork.SaveChangesAsync(cancellationToken);
